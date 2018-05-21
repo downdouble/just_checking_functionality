@@ -1,4 +1,4 @@
-The outline below shows the TOC for a set of anchored tags within an operations/administrator's reference guide topic. The reference could either contain a set of 8 topic pages, or a single reference page with each subsection anchored. 
+The outline below shows the TOC for a set of anchored tags within an operations/administrator's reference guide topic. The reference could either contain a set of topic pages, or a single reference page with each subsection anchored. 
 
 I'd likely place the configuration file sub-elements that are listed in this outline in bullets into tables with 
 element name - required/optional - and description/example in the columns. 
@@ -94,6 +94,8 @@ Ripple Server Configuration/Administration Reference Guide
      </ol>
   </li>  
   <li>Ripple Protocol
+    <ul>
+      <li>Overview
      <ul>
         <li>node_size - tune the size of your server</li>
         <li>ledger_history - amount of ledgers to acquire in server memory on startup and maintain while operating</li>
@@ -103,48 +105,42 @@ Ripple Server Configuration/Administration Reference Guide
         <li>validator_key_revocation - tells peers not to trust a particular key in the peer to peer network</li>
         <li>validators_file - place where list of validators to trust is stored</li>
         <li>path_search - I don't quite understand this element and sub-elements</li>
-     </ul>  
+        <li>...</li>
+        <li>...</li>
+     </ul>
+     </li>
+    </ul>  
   </li>
   <li>HTTPS Client settings
-     <ul>
+     <ul>       
         <li>ssl_verify</li>
         <li>ssl_verify_file</li>
         <li>ssl_verify_dir</li>
      </ul>
   </li>
-  <li>Database settings
-     <ol>
-        <li>Overview</li>
+  <li>Database settings 
+     <ul>
+       <li>Overview</li>
        <li>NodeDB Types and Settings
           <ul>
             <li>NuDB settings</li>
             <li>RocksDB settings</li>
          </ul>
        </li>
-     </ol>
+     </ul>
   </li>
   <li>Diagnostics settings
      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
      </ul>
   </li>
   <li>Voting settings
      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
      </ul>
   </li>
   <li>Example Settings
@@ -152,28 +148,32 @@ Ripple Server Configuration/Administration Reference Guide
         <li>Server settings</li>                 
         <li>Other Ripple config settings</li>
       </ul>
-   </li>
-   <li>Securing Ripple Servers</li>
-   <li>Starting/Stopping Ripple Servers
+  </li>
+  <li>Ripple Server Administration Tasks
+    <ul>
+    <li>Setting up your Ripple Peer to Peer Server</li>
+    <li>Securing a Ripple Server</li>
+    <li>Starting/Stopping Ripple Servers
       <ul>
         <li>From the command line</li>
         <li>From the admin console</li>
      </ul>
-   </li>
-   <li>Clustering Ripple Servers
+    </li>
+    <li>Clustering Ripple Servers
       <ul>
         <li>When to cluster Ripple Servers (Example with Diagram)</li>
-        <li>Benefits/Drawbacks to clustering Ripple Servers</li>
+        <li>Setting up a Ripple Server cluster</li>
         <li>Adding a Ripple Server to your cluster</li>
         <li>Defining node seeding order when clustering Ripple Servers</li>
         <li>Administering a cluster of Ripple Servers</li>
         <li>Starting/Stopping Ripple Servers in a cluster</li>
         <li>Securing a Ripple cluster</li>
-        <li>Ripple Server failover(?)</li>
      </ul>
    </li>
+   <li>Ripple Server failover(?)</li>
    <li>Configuration file loading errors</li>
    <li>Troubleshooting/Common Problems</li>
+ </li>
 </ol>
 
 
