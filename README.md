@@ -1,4 +1,4 @@
-The outline below shows the TOC for a set of anchored tags within an operational/administrator reference guide topic. The reference could either contain a set of 8 topic pages, or a single reference page with each subsection anchored.
+The outline below shows the TOC for a set of anchored tags within an operations/administrator's reference guide topic. The reference could either contain a set of 8 topic pages, or a single reference page with each subsection anchored.
 
 You'll note that the section numbers are off from the config files section numbers. I added an overview section to this topic/page and that shifted the number (in my outline at least) ahead one from the config file comments.
 
@@ -53,10 +53,10 @@ Ripple Server Configuration Guide
         </li>
       </ol>
   </li>
-  <li>Peer protocol settings - defining settings for transaction and validation of the Ripple Payment protocol
+  <li>Peer protocol settings
      <ol>
-        <li></li>
-        <li></li>
+        <li>Overview - These settings control security and access attributes of the Peer to Peer server section of the rippled process. Peer Protocol implements the Ripple Payment protocol. It is over peer connections that transactions and validations are passed from to machine to machine, to determine the contents of validated ledgers.</li>
+        <li>ips</li>
         <li></li>
         <li></li>
         <li></li>
@@ -64,6 +64,7 @@ Ripple Server Configuration Guide
         <li></li>
         <li></li>
      </ol>
+  </li>  
   <li>Ripple Protocol
      <ol>
         <li></li>
@@ -96,7 +97,6 @@ Ripple Server Configuration Guide
         <li>RocksDB settings</li>
      </ol>
   </li>
-  </li>
   <li>Diagnostics settings
      <ol>
         <li></li>
@@ -122,19 +122,11 @@ Ripple Server Configuration Guide
      </ol>
   </li>
   <li>Example Settings
-       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+       <ul>
+        <li>Server settings</li>                 
+        <li>Other Ripple config settings</li>
+      </ul>
    </li>
-  
-
 </ol>
 
 **Notes/Questions:**  
@@ -151,6 +143,9 @@ Examples:
 192.168.0.1  
 192.168.0.1 3939  
 r.ripple.com 51235
+
+  * By convention, if known, IPs are listed in from most to least trusted.  
+The sentence should say "...listed in order, from most to least trusted.", right?
 
 
 
