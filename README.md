@@ -137,7 +137,7 @@ There was also a lack of default values for almost every parameter. I'd likely j
               <li>NuDB Instance Required Keys
                 <ul>
                   <li>type=nudb</li>
-                  <li>path</li>
+                  <li>path - path to DB</li>
                 </ul>
              </li>    
              <li>NuDB Instance Optional Keys
