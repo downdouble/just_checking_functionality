@@ -10,7 +10,7 @@ I've added a few sections to the end of the reference guide: Securing Ripple Ser
 Some questions at the end. With more time, I'd have quite a few more. There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review.
 
 
-Ripple Server Configuration Guide
+Ripple Server Configuration/Administration Reference Guide
 
 <ol>
   <li>Overview Section
@@ -45,7 +45,7 @@ Ripple Server Configuration Guide
             <li>send_queue_limit</li>
           </ul>
         </li>
-        <li>WebSocket protocol settings
+        <li>WebSocket protocol settingsfw
           <ul>
             <li>permessage_deflate</li>
             <li>client_max_window_bits</li>
@@ -98,11 +98,11 @@ Ripple Server Configuration Guide
         <li>node_size - tune the size of your server</li>
         <li>ledger_history - amount of ledgers to acquire in server memory on startup and maintain while operating</li>
         <li>fetch_depth - amount of ledgers to serve to peers that request it</li>
-        <li>validation_seed</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>validation_seed - used to generate the validation public/private key pair</li>
+        <li>validator_token - alternative to validation_seed for performing validation without storing keys on the network</li>
+        <li>validator_key_revocation - tells peers not to trust a particular key in the peer to peer network</li>
+        <li>validators_file - place where list of validators to trust is stored</li>
+        <li>path_search - I don't quite understand this element and sub-elements</li>
      </ul>  
   </li>
   <li>HTTPS Client settings
@@ -115,9 +115,12 @@ Ripple Server Configuration Guide
   <li>Database settings
      <ol>
         <li>Overview</li>
-        <li>NodeDB Types and Settings</li
-        <li>NuDB settings</li>
-        <li>RocksDB settings</li>
+       <li>NodeDB Types and Settings
+          <ul>
+            <li>NuDB settings</li>
+            <li>RocksDB settings</li>
+         </ul>
+       </li>
      </ol>
   </li>
   <li>Diagnostics settings
@@ -151,10 +154,15 @@ Ripple Server Configuration Guide
       </ul>
    </li>
    <li>Securing Ripple Servers</li>
-   <li>Starting/Stopping Ripple Servers</li>
+   <li>Starting/Stopping Ripple Servers
+      <ul>
+        <li>From the command line</li>
+        <li>From the admin console</li>
+     </ul>
+   </li>
    <li>Clustering Ripple Servers
       <ul>
-        <li>When should you cluster Ripple Servers? (Example with Diagram)</li>
+        <li>When to cluster Ripple Servers (Example with Diagram)</li>
         <li>Benefits/Drawbacks to clustering Ripple Servers</li>
         <li>Adding a Ripple Server to your cluster</li>
         <li>Defining node seeding order when clustering Ripple Servers</li>
@@ -199,6 +207,8 @@ What are the relative sizes of load and expected memory use for each of these, a
   * large 
   * huge  
 Tune the servers based on the expected load and available memory. Legal sizes are "tiny", "small", "medium", "large", and "huge". We recommend you start at the default and raise the setting if you have extra memory. The default is "tiny".
+
+  * I'd want to get a coffee with an engineer or other SME to learn more about path_search and what it actually means. I'm not sure how the aggressiveness number works, along with the follow-on elements around path search.
 
 
 * Database section
