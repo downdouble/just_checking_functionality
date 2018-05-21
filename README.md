@@ -5,17 +5,20 @@ element name - required/optional - and description/example in the columns.
 
 You'll note that the section numbers are off from the config files section numbers. I added an overview section to this topic/page and that shifted the number (in my outline at least) ahead one from the config file comments.
 
+I've added a few sections to the end of the reference guide: Securing Ripple Servers, Starting/Stopping Ripple Servers, Clustering Ripple Servers, Adding a Ripple Server to your cluster, Configuration file loading errors, Troubleshooting/Common Problems.
+
 Some questions at the end. With more time, I'd have quite a few more. There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review.
 
 
 Ripple Server Configuration Guide
 
 <ol>
-  <li>Overview
+  <li>Overview Section
   <ol>
      <li>About the Ripple Server Configuration File - rippled.cfg</li>
      <li>Configuration File Location</li>
      <li>Server Element Notation</li>
+     <li>Short overview/ bullet list of all setting types (at a high level, hyperlinked to each section) that are required/optional for the Ripple Configuration File, why the configuration file is needed, and how to secure the configuration file (if possible)</li>
   </ol>
   </li>
   <li>Server instance settings - Defining your server instance and listening ports 
@@ -102,17 +105,12 @@ Ripple Server Configuration Guide
         <li></li>
      </ul>  
   </li>
-  <li>HTTPS Client
-     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-     </ol>
+  <li>HTTPS Client settings
+     <ul>
+        <li>ssl_verify</li>
+        <li>ssl_verify_file</li>
+        <li>ssl_verify_dir</li>
+     </ul>
   </li>
   <li>Database settings
      <ol>
@@ -123,7 +121,7 @@ Ripple Server Configuration Guide
      </ol>
   </li>
   <li>Diagnostics settings
-     <ol>
+     <ul>
         <li></li>
         <li></li>
         <li></li>
@@ -132,10 +130,10 @@ Ripple Server Configuration Guide
         <li></li>
         <li></li>
         <li></li>
-     </ol>
+     </ul>
   </li>
   <li>Voting settings
-     <ol>
+     <ul>
         <li></li>
         <li></li>
         <li></li>
@@ -144,7 +142,7 @@ Ripple Server Configuration Guide
         <li></li>
         <li></li>
         <li></li>
-     </ol>
+     </ul>
   </li>
   <li>Example Settings
        <ul>
@@ -152,9 +150,30 @@ Ripple Server Configuration Guide
         <li>Other Ripple config settings</li>
       </ul>
    </li>
+   <li>Securing Ripple Servers</li>
+   <li>Starting/Stopping Ripple Servers</li>
+   <li>Clustering Ripple Servers
+      <ul>
+        <li>When should you cluster Ripple Servers? (Example with Diagram)</li>
+        <li>Benefits/Drawbacks to clustering Ripple Servers</li>
+        <li>Adding a Ripple Server to your cluster</li>
+        <li>Defining node seeding order when clustering Ripple Servers</li>
+        <li>Administering a cluster of Ripple Servers</li>
+        <li>Starting/Stopping Ripple Servers in a cluster</li>
+        <li>Securing a Ripple cluster</li>
+        <li>Ripple Server failover(?)</li>
+     </ul>
+   </li>
+   <li>Configuration file loading errors</li>
+   <li>Troubleshooting/Common Problems</li>
 </ol>
 
-**Notes/Questions:**  
+
+
+**Notes/Questions for SME:**  
+  
+* In the overview, notation section, the or operand "|" is described, but it's never used again within the document. I'd either take that out of the notation description, or add some examples within the documentation that actually use that operator
+
 
 * For the protocol = [ http, https, peer ], shouldn't it be protocol = < http, https, peer >, since the protocol element is a required element?
 
@@ -173,7 +192,7 @@ r.ripple.com 51235
 The sentence should say "...listed in order, from most to least trusted.", right?
 
 * Ripple Protocol section   
-What are the relative sizes of load and expected memory use for each of these, and how would I make these guesses by: the amount of transactions that are in flight, and the size of the ledgers I'm loading into memory for comparison? I guess to start, it might make sense to just set it to tiny and then scale up as the load and memory requirements for my server increase, but Id want some ballpark figures, as most admins don't like to guess on these types of things. 
+What are the relative sizes of load and expected memory use for each of these, and how would I make these guesses: By the amount of transactions that are in flight, and the size of the ledgers I'm loading into memory for comparison? I guess to start, it might make sense to just set it to tiny and then scale up as the load and memory requirements for my server increase, but Id want some ballpark figures, as most admins don't like to guess on these types of things. 
   * tiny  
   * small 
   * medium 
