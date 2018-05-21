@@ -3,43 +3,36 @@ The outline below shows the TOC for a set of anchored tags within an operational
 
 Ripple Server Configuration Guide
 
-<ol type="1">
+<ol>
   <li>Overview
-<ol type>
-  <li>About the Ripple Server Configuration File</li>
-  <li>Configuration File Location</li>
-  <li>Server Element Notation</li>
-</ol>
+  <ol>
+     <li>About the Ripple Server Configuration File</li>
+     <li>Configuration File Location</li>
+     <li>Server Element Notation</li>
+  </ol>
   </li>
   <li>Server instance settings - Defining your server instance 
-     <ol type>
+     <ol>
        <li>Server Port Settings
          <ol type="A">
-            <li>Name</li>
-            <li>IP address</li>
-            <li>Port</li>
-            <li>Protocol</li>
+            <li>name</li>
+            <li>ip</li>
+            <li>port</li>
+            <li>protocol</li>
          </ol>
-      </li>
-      <li>Client connection settings
-      
-      
-      </li>
-    </ol>
+        </li>
+        <li>Client connection settings</li>
+      </ol>
+  </li>
+  <li>Peer protocol settings - defining settings for transaction and validation of the Ripple Payment protocol
   
-
-</li>
-
-     Port
-     Protocols
-Client connection limits
   
   
   </li>
-# 1. Server instance settings - defining your server instance 
-Names, IP Address, Ports, and Protocols
+</ol>
 
-# 2. Peer Protocol settings - defining settings for transaction and validation of the Ripple Payment protocol
+
+
 
 # 3. Ripple Protocol
 # 4. HTTPS Client
