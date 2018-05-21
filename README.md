@@ -1,3 +1,5 @@
+# Task 2: Rough outline for the beginning of an Operations/Administrator's Reference Guide
+
 The outline below shows the TOC for a set of anchored tags within an operations/administrator's reference guide topic. The reference could either contain a set of topic pages, or a single reference page with each subsection anchored. 
 
 I'd likely place the configuration file sub-elements that are listed in this outline in bullets into tables with 
@@ -10,7 +12,7 @@ I've added a few sections to the end of the reference guide: Securing Ripple Ser
 Some questions at the end. With more time, I'd have quite a few more. There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review.
 
 
-Ripple Server Configuration/Administration Reference Guide
+# Ripple Server Operations/Administrator's Reference Guide
 
 <ol>
   <li>Overview Section
@@ -170,8 +172,10 @@ Ripple Server Configuration/Administration Reference Guide
         <li>Securing a Ripple cluster</li>
      </ul>
    </li>
-   <li>Ripple Server failover(?)</li>
-   <li>Configuration file loading errors</li>
+      <li>Ripple Server failover(?)</li>
+      <li>Setting up your Database</li>
+    </ul>
+   <li>Configuration/Administration errors</li>
    <li>Troubleshooting/Common Problems</li>
  </li>
 </ol>
