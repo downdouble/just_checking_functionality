@@ -9,7 +9,11 @@ You'll note that the section numbers are off from the config files section numbe
 
 I've added a few sections to the end of the reference guide: Securing Ripple Servers, Starting/Stopping Ripple Servers, Clustering Ripple Servers, Adding a Ripple Server to your cluster, Configuration file loading errors, Troubleshooting/Common Problems.
 
-Some questions at the end. With more time, I'd have quite a few more. There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review.
+Some questions at the end. With more time, I'd have quite a few more. 
+
+There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review. 
+
+There was also a lack of default values for almost every parameter. As an administrator, I'd want to know what the default value is for all parameters that are set by the Ripple Server, even if I never had to change them. Administrators like to fine-tune their servers, and just knowing the default value for a parameter can give a certain amount of peace of mind.
 
 
 # Ripple Server Operations/Administrator's Reference Guide
@@ -107,8 +111,11 @@ Some questions at the end. With more time, I'd have quite a few more. There were
         <li>validator_key_revocation - tells peers not to trust a particular key in the peer to peer network</li>
         <li>validators_file - place where list of validators to trust is stored</li>
         <li>path_search - I don't quite understand this element and sub-elements</li>
-        <li>...</li>
-        <li>...</li>
+        <li>path_search_fast</li>
+        <li>path_search_max</li>
+        <li>path_search_old</li>
+       <li>fee_default - Sets the base cost of a transaction in drops of network connection and server has no basis for fee info</li>
+       <li>workers - configurable set of threads to run</li>
      </ul>
      </li>
     </ul>  
@@ -120,13 +127,61 @@ Some questions at the end. With more time, I'd have quite a few more. There were
         <li>ssl_verify_dir</li>
      </ul>
   </li>
-  <li>Database settings 
+  <li>Database settings - node_db
      <ul>
        <li>Overview</li>
-       <li>NodeDB Types and Settings
+       <li>node_db - Types and Settings
           <ul>
-            <li>NuDB settings</li>
-            <li>RocksDB settings</li>
+            <li>NuDB settings
+            <ul>
+              <li>NuDB Instance Required Keys
+                <ul>
+                  <li>type=nudb</li>
+                  <li>path</li>
+                </ul>
+             </li>    
+             <li>NuDB Instance Optional Keys
+                <ul>
+                   <li>online_delete</li>
+                   <li>advisory_delete</li>
+                   <li>earliest_seq</li>
+                </ul>
+            </li> 
+            </ul>
+            </li>
+            <li>RocksDB settings
+              <ul>
+                <li>RocksDB Instance Required Keys
+                <ul>
+                  <li>type=rocksdb</li>
+                  <li>path - path to DB</li>
+                  <li>max_size_gb</li>         
+                </ul>
+             </li>    
+             <li>RocksDB Instance Optional Keys
+                <ul>
+                   <li>compression</li>
+                   <li>online_delete</li>
+                   <li>advisory_delete</li>
+                   <li>earliest_seq</li>
+                </ul>
+            </li> 
+              </ul>
+            </li> 
+            <li>node_db general settings
+             <ul>
+               <li>import_db</li>
+               <li>database_path</li>  
+               <li>shard_db</li>
+             </ul>
+            </li>            
+         </ul>
+      </li> 
+       <li>General node_db Database Configuration Settings
+         <ul>
+           <li>online_delete</li>
+           <li>advisory_delete</li>
+           <li>earliest_seq</li>
          </ul>
        </li>
      </ul>
@@ -138,11 +193,11 @@ Some questions at the end. With more time, I'd have quite a few more. There were
         <li>...</li>
      </ul>
   </li>
-  <li>Voting settings
+  <li>Voting settings - Settings used during voting ledgers
      <ul>
-        <li>...</li>
-        <li>...</li>
-        <li>...</li>
+        <li>reference_fee </li>
+        <li>account_reserve </li>
+        <li>owner_reserve </li>
      </ul>
   </li>
   <li>Example Settings
@@ -174,6 +229,8 @@ Some questions at the end. With more time, I'd have quite a few more. There were
    </li>
       <li>Ripple Server failover(?)</li>
       <li>Setting up your Database</li>
+      <li>Fine tuning your Ripple Server and setting up diagnostics</li>
+      <li>Transaction settings - Setting up your reserves</li>
     </ul>
    <li>Configuration/Administration errors</li>
    <li>Troubleshooting/Common Problems</li>
@@ -220,3 +277,12 @@ Tune the servers based on the expected load and available memory. Legal sizes ar
   * In the DB section, NuDB and RocksDB are described and from the file, it makes it seem like these are the only DBs you can set up with a Ripple server. 
   Are these enterprise-ready DBs or meant for testing purposes? 
   Can a server admin connect a different database such as Oracle or Postgres or Mongodb to Ripple? 
+
+
+* Voting Section
+
+  * What's the default configured amount for all parameters within the voting section?  
+  reference_fee  
+  account_reserve  
+  owner_reserve  
+  
