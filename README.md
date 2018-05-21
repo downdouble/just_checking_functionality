@@ -2,18 +2,18 @@
 
 The outline below shows the TOC for a set of anchored tags within an operations/administrator's reference guide topic. The reference could either contain a set of topic pages, or a single reference page with each subsection anchored. 
 
-I'd likely place the configuration file sub-elements that are listed in this outline in bullets into tables with 
-element name - required/optional - and description/example in the columns. 
+I'd likely place the configuration file sub-parameters that are listed in this outline in bullets into tables with 
+parateter name - required/optional - and description/example in the columns. 
 
 You'll note that the section numbers are off from the config files section numbers. I added an overview section to this topic/page and that shifted the number (in my outline at least) ahead one from the config file comments.
 
 I've added a few sections to the end of the reference guide: Securing Ripple Servers, Starting/Stopping Ripple Servers, Clustering Ripple Servers, Adding a Ripple Server to your cluster, Configuration file loading errors, Troubleshooting/Common Problems.
 
-Some questions at the end. With more time, I'd have quite a few more. 
+Some questions at the end. With more time, I'd have a few more. 
 
 There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review. 
 
-There was also a lack of default values for almost every parameter. As an administrator, I'd want to know what the default value is for all parameters that are set by the Ripple Server, even if I never had to change them. Administrators like to fine-tune their servers, and just knowing the default value for a parameter can give a certain amount of peace of mind.
+There was also a lack of default values for almost every parameter. As an administrator, I'd want to know what the default value is for all parameters that are set by the Ripple Server, even if I never had to change them. Administrators like to fine-tune their servers, and just knowing the default value for a parameter can give a certain amount of peace of mind. I'm also thinking that business owners would want to have an idea how and where to set minimum/maximum settings based on their expected transactional input/output.
 
 
 # Ripple Server Operations/Administrator's Reference Guide
@@ -188,16 +188,16 @@ There was also a lack of default values for almost every parameter. As an admini
   </li>
   <li>Diagnostics settings
      <ul>
-        <li>...</li>
-        <li>...</li>
-        <li>...</li>
+        <li>debug_logfile - location for the server debugging log file</li>
+        <li>insight - location where to send server instrumentation metrics</li>
+        <li>perf - location and configuartion for performance logging</li>
      </ul>
   </li>
   <li>Voting settings - Settings used during voting ledgers
      <ul>
-        <li>reference_fee </li>
-        <li>account_reserve </li>
-        <li>owner_reserve </li>
+        <li>reference_fee</li>
+        <li>account_reserve</li>
+        <li>owner_reserve</li>
      </ul>
   </li>
   <li>Example Settings
@@ -229,7 +229,13 @@ There was also a lack of default values for almost every parameter. As an admini
    </li>
       <li>Ripple Server failover(?)</li>
       <li>Setting up your Database</li>
-      <li>Fine tuning your Ripple Server and setting up diagnostics</li>
+      <li>Fine tuning your Ripple Server - Setting up diagnostics
+         <ul>
+           <li>Setting up server debugging location</li>
+           <li>Setting up server instrumentation logging and data collection</li>
+           <li>Setting up server performance logging</li>
+        </ul>
+      </li>
       <li>Transaction settings - Setting up your reserves</li>
     </ul>
    <li>Configuration/Administration errors</li>
