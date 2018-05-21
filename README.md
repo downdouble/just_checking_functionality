@@ -99,7 +99,7 @@ There was also a lack of default values for almost every parameter. I'd likely j
         </li> 
      </ol>
   </li>  
-  <li>Ripple Protocol
+  <li>Ripple Protocol settings
     <ul>
       <li>Overview
      <ul>
