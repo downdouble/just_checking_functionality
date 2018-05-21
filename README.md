@@ -1,50 +1,141 @@
 The outline below shows the TOC for a set of anchored tags within an operational/administrator reference guide topic. The reference could either contain a set of 8 topic pages, or a single reference page with each subsection anchored.
 
+You'll note that the section numbers are off from the config files section numbers. I added an overview section to this topic/page and that shifted the number (in my outline at least) ahead one from the config file comments.
+
 
 Ripple Server Configuration Guide
 
 <ol>
   <li>Overview
   <ol>
-     <li>About the Ripple Server Configuration File</li>
+     <li>About the Ripple Server Configuration File - rippled.cfg</li>
      <li>Configuration File Location</li>
      <li>Server Element Notation</li>
   </ol>
   </li>
   <li>Server instance settings - Defining your server instance 
      <ol>
-       <li>Server Port Settings
-         <ol type="A">
+       <li>Server port settings
+         <ol>
             <li>name</li>
             <li>ip</li>
             <li>port</li>
             <li>protocol</li>
          </ol>
         </li>
-        <li>Client connection settings</li>
+        <li>Client connection settings
+            <ol>
+            <li>limit</li>
+            <li>user/password</li>
+            <li>admin - admin command access ips</li>
+            <li>admin_user/admin_password</li>
+            <li>secure_gateway - ip settings</li>
+            <li>ssl_key</li>
+            <li>ssl_cert</li>
+            <li>ssl_chain</li>
+            <li>ssl_ciphers</li> 
+            <li>send_queue_limit</li>
+          </ol>
+        </li>
+        <li>WebSocket protocol settings
+          <ol>
+            <li>permessage_deflate</li>
+            <li>client_max_window_bits</li>
+            <li>server_max_window_bits</li>
+            <li>client_no_context_takeover</li>
+            <li>server_no_context_takeover</li>
+            <li>compress_level</li>
+            <li>memory_level</li>
+            <li>websocket_ping_frequency</li>
+          </ol>
+        </li>
+        <li>RPC settings        
+        </li>
       </ol>
   </li>
   <li>Peer protocol settings - defining settings for transaction and validation of the Ripple Payment protocol
-  
-  
-  
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ol>
+  <li>Ripple Protocol
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ol>  
   </li>
+  <li>HTTPS Client
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ol>
+  </li>
+  <li>Database settings
+     <ol>
+        <li>Overview</li>
+        <li>NodeDB Types and Settings</li
+        <li>NuDB settings</li>
+        <li>RocksDB settings</li>
+     </ol>
+  </li>
+  </li>
+  <li>Diagnostics settings
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ol>
+  </li>
+  <li>Voting settings
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ol>
+  </li>
+  <li>Example Settings
+       <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+   </li>
+  
+
 </ol>
-
-
-
-
-# 3. Ripple Protocol
-# 4. HTTPS Client
-# 5. Database
-Overview
-NodeDB Types and Settings
-NuDB settings
-RocksDB settings
-# 6. Diagnostics
-# 7. Voting
-# 8. Example Settings
-
 
 **Notes/Questions:**  
 
