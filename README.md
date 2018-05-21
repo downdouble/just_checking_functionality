@@ -13,7 +13,7 @@ Some questions at the end. With more time, I'd have a few more.
 
 There were a lot of weirdly constructed comments that I would rewrite when placing into the reference guide, and then I'd place notes for the developer or QA person (SME) to review during documentation review. 
 
-There was also a lack of default values for almost every parameter. As an administrator, I'd want to know what the default value is for all parameters that are set by the Ripple Server, even if I never had to change them. Administrators like to fine-tune their servers, and just knowing the default value for a parameter can give a certain amount of peace of mind. I'm also thinking that business owners would want to have an idea how and where to set minimum/maximum settings based on their expected transactional input/output.
+There was also a lack of default values for almost every parameter. I'd likely just install my own Ripple Server, and make a note of the default values, and then check with the SME on this. As an administrator, I'd want to know what the default value is for all parameters that are set by the Ripple Server, even if I never had to change them. Administrators like to fine-tune their servers, and just knowing the default value for a parameter can give a certain amount of peace of mind. I'm also thinking that business owners would want to have an idea how and where to set minimum/maximum settings based on their expected transactional input/output.
 
 
 # Ripple Server Operations/Administrator's Reference Guide
