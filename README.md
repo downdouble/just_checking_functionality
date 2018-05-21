@@ -56,13 +56,33 @@ Ripple Server Configuration Guide
   <li>Peer protocol settings
      <ol>
         <li>Overview - These settings control security and access attributes of the Peer to Peer server section of the rippled process. Peer Protocol implements the Ripple Payment protocol. It is over peer connections that transactions and validations are passed from to machine to machine, to determine the contents of validated ledgers.</li>
-        <li>ips</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Peer connection/server settings - Production settings
+           <ol>
+             <li>ips|ips_fixed</li>
+             <li>peer_private - peer server privacy settings</li>
+             <li>peers_max - peer connection limits</li>
+             <li>node_seed - set priority order of your peer nodes</li>
+             <li>cluster_nodes - extend trust to multiple nodes</li>
+             <li>sntp_servers - Network Time Protocol server addresses</li>
+             <li>overlay - settings related to the peer to peer overlay</li>
+          </ol>
+        </li>
+        <li>Transaction Queue Settings - Beta/Experimental - do not use on production configuration files. Set of key/value parameters to tune the performance of the transaction queue.
+          <ol>
+             <li>ledgers_in_queue</li>
+             <li>minimum_queue_size</li>
+             <li>retry_sequence_percent</li>
+             <li>multi_txn_percent</li>
+             <li>minimum_escalation_multiplier</li>
+             <li>minimum_txn_in_ledger</li>
+             <li>minimum_txn_in_ledger_standalone</li>
+             <li>target_txn_in_ledger</li>
+             <li>maximum_txn_in_ledger</li>
+             <li>maximum_txn_per_account</li>
+             <li>minimum_last_ledger_buffer</li>
+             <li>zero_basefee_transaction_feelevel</li>
+           </ol>          
+        </li> 
      </ol>
   </li>  
   <li>Ripple Protocol
